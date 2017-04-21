@@ -7,6 +7,14 @@
 # All rights reserved - Do Not Redistribute
 #
 
+yum_repository 'docker' do
+  baseurl 'https://yum.dockerproject.org/repo/main/centos/7/'
+  description 'Docker Repository'
+  enabled true
+  gpgcheck true
+  gpgkey 'https://yum.dockerproject.org/gpg'
+end
+
 docker_installation_package 'default' do
   action :create
 end
